@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='box.css')}}">
-    <title>{% block title %}{% endblock %} - My Flask</title>
+    <title>{% block title %}{% endblock %} - Flask</title>
 </head>
 {%endblock%}
 {% block navbar %}
@@ -22,13 +22,13 @@
                 <a class="nav-link" href="{{url_for('home')}}">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Concepts</a>
+                <a class="nav-link" href="{{url_for('qsort')}}">Quick Sort</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Algorithims</a>
+                <a class="nav-link" href="{{url_for('bsort')}}">Bubble Sort</a>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('bogosort')}}">Bogosort</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{{url_for('box')}}">Bubble Sort<span class="sr-only"></span></a>
         </ul>
     </div>
 </nav>
