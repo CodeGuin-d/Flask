@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Bogosort - Flask</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='box.css')}}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('qsort')}}">Quick Sort</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('bsort')}}">Bubble Sort</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('bogosort')}}">Bogosort<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+<body>
+    <h1>Bogosort:</h1>
+    <div>
+        {%for i in range(len)%}
+        <div id="BLACK">
+            <div id={{boxes[i]}}></div>
+        </div>
+        {%endfor%}
+    </div>
+</body>
+
+<body>
+    <div>
+        <form method="post" action="/bogo">
+            <input type="submit" name="sort" value="Bogosort">
+            <input type="submit" name="random" value="Randomize List">
+        </form>
+    </div>
+</body>
+
+<body>
+    <div>
+        <p>This is Bogosort the most efficent and effective sorting algorithm humans could dream of. It works by randomizing the list till it is in order.</p>
+    </div>
+</body>
+</html>
